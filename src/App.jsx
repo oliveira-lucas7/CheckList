@@ -16,6 +16,8 @@ function App() {
   {
     const novaLista = listaTarefas.filter( item => item.id !== id);
     setListaTarefas( novaLista );
+    //Quando uma tarefa é criada, automaticamente ele ganha um id, e cada tarefa tem um id diferente. Quando o usuário aperta no botão de excluir, o react vai procurar o id do elemento no qual vai ser excluído, vai ser mandado para essa função, aonde vai procurar todos os elementos que tem o id diferente daquele que ele quer, os que forem diferente ele mantém, e o que for igual é retirado.
+    //Depois que a modiicação é feita, ela é salva no const novaLista, que por sua vez manda para o modificador setListaTarefas.
   }
 
   useEffect( () => {
